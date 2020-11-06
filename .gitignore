@@ -1,2 +1,3 @@
 *.so
 *.smt2
+/src/clpfd_z3.bundle
