@@ -4,7 +4,7 @@ Z3_INCLUDE_PATH:="/path/to/Z3.h"
 Z3_LIB_PATH:="" #"/path/to/libz3.so"
 SHEXT=bundle #so or bundle or dll
 
-install:
+install: Makefile clpfd_z3.pl clpfd_z3.c
 	$(SICSTUS_BIN_PATH)splfr clpfd_z3.pl clpfd_z3.c --cflag=-lz3  --cflag=-I$(Z3_INCLUDE_PATH) -lz3 -L$(Z3_LIB_PATH)
 	rm -f clpfd_z3_glue.c clpfd_z3_glue.h clpfd_z3_glue.o clpfd_z3.o
 
