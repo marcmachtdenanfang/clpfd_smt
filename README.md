@@ -22,8 +22,8 @@ you can simply load clpfd_smt using
 The Z3 interface however utilizes a C-API. Thus it is necessary to compile the interface.
 You can use the makefile like this:
 ```
- make Z3_INCLUDE_PATH=/home/username/z3/src/api/z3.h \
-    Z3_LIB_PATH=/home/username/z3/build/
+ make Z3_INCLUDE_PATH=/home/$USER/z3/src/api/z3.h \
+    Z3_LIB_PATH=/home/$USER/z3/build/
 ```
 Or you can use the SICStus splfr utility.
 
