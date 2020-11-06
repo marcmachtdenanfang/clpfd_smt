@@ -1,0 +1,43 @@
+for n in 1 2 3 4 5 ; do \
+	echo "Iteration: $n" ; \
+	sicstus --noinfo --nologo --goal "[alpha_z3], main,halt." ; \
+	echo "\n" ; \
+	sicstus --noinfo --nologo --goal "[alpha_clpfd], main,halt." ; \
+	echo "\n\n" ; \
+done
+
+LIA results: 
++10 milliseconds for normal alpha
++30 milliseconds for pseudo indexical
+
+Iteration 1, 2 => normal first then indexical
+Iteration 3, 4 => indexical first then normal
+
+QF_FD
+Alpha Z3
+Iteration, Program, Compilation, labeling
+1, 0.010, 0.006, 0.061
+2, 0.01, 0.06, 0.058
+3, 0.001, 0.002, 0.054
+4, 0.001, 0.002, 0.054
+
+Alpha Z3 Pseudo Indexical
+Iteration, Program, Compilation, labeling
+1, 0.002, 0.001, 0.051
+2, 0.002, 0.001, 0.052
+3, 0.011, 0.006, 0.060
+4, 0.014, 0.006, 0.059
+
+Alpha clpfd
+Iteration, Program, Labeling
+1, 0.012, 0.005
+2, 0.011, 0.005
+3, 0.008, 0
+4, 0.007, 0
+
+Alpha clpfd Indexical
+Iteration, Program, Labeling
+1, 0, 0.001
+2, 0.001, 0.001
+3, 0.005, 0.005
+4, 0.004, 0.006

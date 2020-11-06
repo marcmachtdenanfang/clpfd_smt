@@ -1,0 +1,63 @@
+clpfd:
+all SIX together: 
+0.024 seconds
+
+first benchmark is "warmup" runtime
+Solving for N=4, runtime:0.015, labeling:0.005
+Solving for N=5, runtime:0.000, labeling:0.000
+Solving for N=7, runtime:0.000, labeling:0.001
+Solving for N=10, runtime:0.000, labeling:0.000
+Solving for N=18, runtime:0.000, labeling:0.000
+Solving for N=30, runtime:0.000, labeling:0.001
+yes
+
+
+
+Z3, QF_FD:
+
+Compilation CPU time 0.007 seconds
+Solving for N=4, runtime:0.012, labeling:0.012
+
+Compilation CPU time 0.001 seconds
+Solving for N=5, runtime:0.001, labeling:0.004
+
+Compilation CPU time 0.002 seconds
+Solving for N=7, runtime:0.003, labeling:0.009
+
+Compilation CPU time 0.004 seconds
+Solving for N=10, runtime:0.005, labeling:0.053
+
+Compilation CPU time 0.015 seconds
+Solving for N=18, runtime:0.019, labeling:6.170
+
+Compilation CPU time 0.035 seconds
+Solving for N=30, runtime:0.062, labeling:798.321
+yes
+
+4, 0.024
+5, 0.002
+7, 0.015
+10, 0.066
+18, 11.807
+30, 1090.249 (compilation=0.035)
+
+Z3, LIA:
+4, 0.030
+5, 0.013
+7, 0.047
+10, 0.264
+18, 46.515
+30, no result after 6 hours.
+
+Compilation CPU time 0.006 seconds
+There are no more solutions.
+Solving for N=4, runtime:0.013, labeling:0.015
+Compilation CPU time 0.002 seconds
+Solving for N=5, runtime:0.002, labeling:0.007
+Compilation CPU time 0.002 seconds
+Solving for N=7, runtime:0.003, labeling:0.021
+Compilation CPU time 0.004 seconds
+Solving for N=10, runtime:0.006, labeling:0.273
+Compilation CPU time 0.015 seconds
+Solving for N=18, runtime:0.017, labeling:175.224
+Compilation CPU time 0.036 seconds

@@ -1,0 +1,56 @@
+partit
+?- main(N).
+?- main_global(N).
+
+clpfd, domain
+N, execution, labeling
+16, 0.000, 0.001
+32, 0.001, 0.012
+40, 0.001, 0.033
+48, 0.001, 0.240
+56, 0.002, 0.710
+64, 0.002, 2.249
+
+clpfd, global
+N, execution, labeling
+16, 0.000, 0.001
+32, 0.001, 0.015
+40, 0.000, 0.046
+48, 0.000, 0.411
+56, 0.001, 1.397
+64, 0.000, 4.725
+
+Z3, QF_FD
+z3, partit_qffd: not possible with QF_FD
+=> corrected: possible because of exchange of equivalent constraints,
+N, execution, compilation, labeling
+16, 0.001, 0.002, 0.074
+24, 0.001, 0.002, 0.157
+32, 0.003, 0.003, 0.969
+40, 0.003, 0.003, 2.046
+48, 0.004, 0.004, 5.457
+56, 0.004, 0.005, 4.122
+64, 0.005, 0.006, 5.922
+
+
+z3, global
+N, execution, compilation, labeling
+16, 0.002, 0.002, 0.066
+24, 0.003, 0.002, 0.132
+32, 0.012, 0.006, 0.828
+40, 0.000, 0.002, 3.980
+48, 0.002, 0.003, 35.434
+56, 0.002, 0.003, 11.652
+64, 0.005, 0.005, 35.205
+
+
+Z3, LIA, much worse
+z3, domain
+N, execution, compilation, labeling
+16, 0.009, 0.006, 0.739
+24, 0.013, 0.007, 24.264
+
+z3, global
+N, execution, compilation, labeling
+16, 0.002, 0.002, 0.515
+32, 0.003, 0.003, 227.235

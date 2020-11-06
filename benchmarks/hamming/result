@@ -1,0 +1,9 @@
+hamming_clpfd
+ID, execution, labeling
+1, 0.219, 0.045
+2, 0.003, 0.044
+
+hamming_z3:
+ID, execution, compilation, labeling
+1, takes eternity
+2, 0.034, 0.196

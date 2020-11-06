@@ -1,0 +1,6 @@
+clpfd_z__glue {
+  global:
+    sp_main_SPENV_clpfd_0x5Fz3;
+  local:
+    *;
+};

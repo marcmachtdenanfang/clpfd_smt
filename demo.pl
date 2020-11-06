@@ -1,0 +1,1 @@
+:- consult('src/clpfd_smt_interface').

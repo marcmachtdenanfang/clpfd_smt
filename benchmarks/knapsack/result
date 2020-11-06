@@ -1,0 +1,18 @@
+LIA MUCH FASTER THAN QF_FD!
+ 
+ Results:
+ ?- main.
+ clpfd: 
+ program, labeling, option
+ 0.013, 0.675, enum
+ 0.013, 0.745, ffc
+ 0.013, 0.329, bisect
+
+ Z3, QF_FD:
+ program, compilation, labeling
+ 0.008, 0.005, 22.562
+
+ Z3, LIA
+ program, compilation, labeling
+ 0.008, 0.005, 0.021
+ 0.008, 0.005, 0.013

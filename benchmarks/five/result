@@ -1,0 +1,8 @@
+?- five_house([leftmost], local).
+clpfd:
+program, labeling
+0.009, 0.006
+
+Z3:
+program, compilation, labeling
+0.010, 0.005, 0.008
