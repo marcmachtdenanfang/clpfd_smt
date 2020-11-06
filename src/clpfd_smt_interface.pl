@@ -18,7 +18,7 @@
 
 :- ensure_loaded(clpfd_smt_base).
 :- ensure_loaded(clpfd_smtlib2).
-:- if(file_exists('clpfd_z3.so')).
+:- if((file_exists('clpfd_z3.so') ; file_exists('clpfd_z3.bundle'))).
     :- ensure_loaded(clpfd_z3).
 :- endif.
 

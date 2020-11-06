@@ -2,6 +2,7 @@ SICSTUS_BIN_PATH:=""
 SICSTUS_INCLUDE_PATH:="/path/to/sicstus/include"
 Z3_INCLUDE_PATH:="/path/to/Z3.h"
 Z3_LIB_PATH:="" #"/path/to/libz3.so"
+SHEXT=bundle #so or bundle or dll
 
 install:
 	$(SICSTUS_BIN_PATH)splfr clpfd_z3.pl clpfd_z3.c --cflag=-lz3  --cflag=-I$(Z3_INCLUDE_PATH) -lz3 -L$(Z3_LIB_PATH)
@@ -11,10 +12,10 @@ debug:
 	$(SICSTUS_BIN_PATH)sicstus -f --noinfo --nologo --goal "use_module(library(fligen)),splfr_prepare_foreign_resource('clpfd_z3','clpfd_z3.pl','clpfd_z3_glue.c','clpfd_z3_glue.h', [])."
 	gcc -I$(SICSTUS_INCLUDE_PATH) -I"." -g -O2 -pipe -D_REENTRANT -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -fPIC -DSPDLL  -DSP_RESNAME=clpfd_0x5Fz3 -DSICSTUS_TARGET_VERSION=40600 -c clpfd_z3.c -o clpfd_z3.o -lz3 -I$(Z3_INCLUDE_PATH)
 	gcc -I$(SICSTUS_INCLUDE_PATH) -I"." -g -O2 -pipe -D_REENTRANT -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -fPIC -DSPDLL  -DSP_RESNAME=clpfd_0x5Fz3 -DSICSTUS_TARGET_VERSION=40600 -c clpfd_z3_glue.c -o clpfd_z3_glue.o
-	gcc -shared -Wl,--version-script=clpfd_z3_glue.mapfile clpfd_z3.o clpfd_z3_glue.o -o clpfd_z3.so -lz3 -L$(Z3_LIB_PATH) -ldl -lm -lpthread -lrt
+	gcc -shared -Wl,--version-script=clpfd_z3_glue.mapfile clpfd_z3.o clpfd_z3_glue.o -o clpfd_z3.$(SHEXT) -lz3 -L$(Z3_LIB_PATH) -ldl -lm -lpthread -lrt
 
 clean:
-	rm -f clpfd_z3.so
+	rm -f clpfd_z3.$(SHEXT)
 
 # splfr clpfd_z3.pl clpfd_z3.c --cflag=-lz3  --cflag=-I"/home/marc/anaconda3/include" --verbose --keep
 # splfr clpfd_z3.pl clpfd_z3.c --cflag=-lz3  --cflag=-I"/home/marc/anaconda3/include" --verbose --keep
