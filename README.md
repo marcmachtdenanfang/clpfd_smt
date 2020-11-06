@@ -144,6 +144,7 @@ donald(_Lab, Consistency):-
   * bool_or/2
   * bool_xor/2
   * bool_channel/4
+  * lex_chain/1
 
 Reification of constraints is supported.
 
